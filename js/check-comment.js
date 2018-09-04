@@ -8,12 +8,9 @@ $(document).ready(function() {
 		var commentText = $('#commentTextarea').val();
 		// console.log("Значение commentText = '" + commentText + "'");
 
-
 		if ( commentText == '' ) {
-			console.log('Пусто');
 			$('#errorEmpty').slideDown();
 		} else {
-			console.log('Комментарий есть');
 			$('#commentForm').unbind('submit');
 			$('#commentForm').submit();
 		}
