@@ -17,6 +17,7 @@ $(document).ready(function() {
 			validEmail = false,
 			validPass = false,
 			testEmail = 'mail@mail.com';
+			testPass = '123';
 
 		// Email Check
 		if ( email == '' ) {
@@ -38,7 +39,7 @@ $(document).ready(function() {
 
 		// Test email check
 		if (validPass == true && validEmail == true) {
-			if ( email == testEmail ) {
+			if ( email != testEmail || password != testPass) {
 				$('#errorEmailRestricted .notify').show();
 				$('#errorEmailRestricted').slideDown();
 			} else {
